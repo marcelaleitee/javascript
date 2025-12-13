@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font: normal 20px arial;
+        }
+    </style>
+</head>
+<body>
+    <h1>Você é Brasileiro ou Estrangeiro?</h1>
+    De onde você é?
+    <input type="text" id="txtp">
+    <input type="button" value="Verificar" onclick="conferir()">
+
+    <div id="res"></div>
+
+    <script>
+        function conferir() {
+            var pais = document.querySelector('input#txtp')
+            var res = document.querySelector('div#res')
+            var nac = pais.value.trim().toLowerCase()
+
+            if (nac == "brasil") {
+                res.innerHTML = "<p>Você é Brasileiro!</p>"
+            } else {
+                res.innerHTML = "<p>Você é Estrangeiro!</p>"
+            }
+        }
+    </script>
+</body>
+</html>
